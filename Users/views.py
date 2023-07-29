@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from rest_framework.views import APIView
 
-from core.Users.serializers import Userserializer
+from .serializers import Userserializer
 
 from .models import User_Login_History, Users
 # Create your views here.
