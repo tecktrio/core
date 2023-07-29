@@ -84,7 +84,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'core',
-        "USER":'root',
+        "USER":'widecity',
         'PASSWORD':'Widecity123#@'
     }
 }
