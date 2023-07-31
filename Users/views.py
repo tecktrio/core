@@ -120,7 +120,7 @@ class GetUser(APIView):
     def get(self,request,Email):
         if Users.objects.filter(Email=Email).exists():
             user = Users.objects.get(Email=Email)
-            serializeduser = Userserializer(user,many=True)
+            serializeduser = Userserializer(user)
             return JsonResponse({'status':'success','data':serializeduser.data})
         else:
             return JsonResponse({'status':'failed'})
