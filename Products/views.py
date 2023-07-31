@@ -85,7 +85,7 @@ class HandleUserProducts(APIView):
             UserEmail = request.data['UserEmail']
             ProductName = request.data['ProductName']
             DueDate = request.data['DueDate']
-            if Users.objects.filter(Email=UserEmail).exists():
+            if not Users.objects.filter(Email=UserEmail).exists():
                 return JsonResponse({'status':'failed','error':'user not found'})
             if UserProducts.objects.filter(UserEmail=UserEmail,ProductName=ProductName).exists():
                 return JsonResponse({'status':'failed','error':'Product already added'})
